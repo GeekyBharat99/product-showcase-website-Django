@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+
+
+
+
+
+<div class="mkd-content">
+<div class="mkd-content-inner">
+
+<div class="mkd-container">
+<div class="mkd-container-inner clearfix">
+<div class="mkd-two-columns-75-25 mkd-content-has-sidebar mkd-woocommerce-with-sidebar clearfix">
+<div class="mkd-column1 mkd-content-left-from-sidebar">
+
+<div class="mkd-column-inner">
+
+<div class="widget mkd-separator-widget"><div class="mkd-separator-holder clearfix  mkd-separator-center mkd-separator-normal">
+<div class="mkd-separator" style="border-style: solid;margin-top: 20px"></div>
+</div>
+</div>
+
+<div class="mkd-pl-main-holder"><ul class="products">
+ {% for i in item %}
+<li class="post-202 product type-product status-publish has-post-thumbnail product_cat-gadgets product_cat-gloves product_tag-blue product_tag-craft product_tag-machines  instock shipping-taxable purchasable product-type-simple">
+<div class="mkd-pl-inner"><div class="mkd-pl-image"><img width="415" height="415" src="{{ i.img1.url }}" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="f" title="product9" srcset="{{ i.img1.url }} 415w, {{ i.img1.url }} 150w, {{ i.img1.url }} 180w, {{ i.img1.url }} 550w" sizes="(max-width: 415px) 100vw, 415px" style="height: 250px; width: 250px;" /></div><div class="mkd-pl-text"><div class="mkd-pl-text-outer"><div class="mkd-pl-text-inner"><a rel="nofollow" href="{% url 'product_details' i.id %}" data-quantity="1" data-product_id="202" data-product_sku="0009" class="button product_type_simple add_to_cart_button ajax_add_to_cart">See More</a></div></div></div><a href="{% url 'product_details' i.id %}" class="woocommerce-LoopProduct-link"></a></div><div class="mkd-pl-text-wrapper">
+<h5 class="mkd-product-list-title"><a href="{% url 'product_details' i.id %}">{{ i.name }}</a></h5>
+
+</div></li>
+{% endfor %}</ul>
+</div>
+
+
+</div>
+</div>
+<div class="mkd-column2">
+<div class="mkd-column-inner">
+<aside class="mkd-sidebar">
+<div class="widget woocommerce widget_product_search">
+</div><div class="widget mkd-separator-widget"><div class="mkd-separator-holder clearfix  mkd-separator-center mkd-separator-normal">
+<div class="mkd-separator" style="border-style: solid;margin-top: 1px"></div>
+</div>
+</div><div class="widget widget_text"><div class="mkd-widget-title-holder"><h4 class="mkd-widget-title">Follow Us</h4><div class="mkd-separator-holder clearfix"><div class="mkd-separator"></div></div></div> <div class="textwidget"></div>
+</div><div class="widget widget_mkd_social_icon_widget">
+<span class="mkd-icon-shortcode square" style="margin: 0 10px 10px 0;width: 52px;height: 52px;line-height: 52px;background-color: #f0f0ef" data-hover-background-color="#fdc94b" data-hover-color="#ffffff" data-color="#858484">
+<a itemprop="url" class="" href="{{ links.rss }}" target="_blank">
+<span aria-hidden="true" class="mkd-icon-font-elegant social_rss mkd-icon-element" style="color: #858484"></span>
+</a>
+</span>
+</div><div class="widget widget_mkd_social_icon_widget">
+<span class="mkd-icon-shortcode square" style="margin: 0 10px 10px 0;width: 52px;height: 52px;line-height: 52px;background-color: #f0f0ef" data-hover-background-color="#fdc94b" data-hover-color="#ffffff" data-color="#858484">
+<a itemprop="url" class="" href="{{ links.twitter }}" target="_blank">
+<span aria-hidden="true" class="mkd-icon-font-elegant social_twitter mkd-icon-element" style="color: #858484"></span>
+</a>
+</span>
+</div><div class="widget widget_mkd_social_icon_widget">
+<span class="mkd-icon-shortcode square" style="margin: 0 10px 10px 0;width: 52px;height: 52px;line-height: 52px;background-color: #f0f0ef" data-hover-background-color="#fdc94b" data-hover-color="#ffffff" data-color="#858484">
+<a itemprop="url" class="" href="{{ links.facebook }}" target="_blank">
+<span aria-hidden="true" class="mkd-icon-font-elegant social_facebook mkd-icon-element" style="color: #858484"></span>
+</a>
+</span>
+</div><div class="widget widget_mkd_social_icon_widget">
+<span class="mkd-icon-shortcode square" style="margin: 0 10px 10px 0;width: 52px;height: 52px;line-height: 52px;background-color: #f0f0ef" data-hover-background-color="#fdc94b" data-hover-color="#ffffff" data-color="#858484">
+<a itemprop="url" class="" href="{{ links.instagram }}" target="_blank">
+<span aria-hidden="true" class="mkd-icon-font-elegant social_instagram mkd-icon-element" style="color: #858484"></span>
+</a>
+</span>
+</div><div class="widget widget_mkd_social_icon_widget">
+<span class="mkd-icon-shortcode square" style="margin: 0 10px 10px 0;width: 52px;height: 52px;line-height: 52px;background-color: #f0f0ef" data-hover-background-color="#fdc94b" data-hover-color="#ffffff" data-color="#858484">
+<a itemprop="url" class="" href="{{ links.tumblr }}" target="_self">
+<span aria-hidden="true" class="mkd-icon-font-elegant social_tumblr mkd-icon-element" style="color: #858484"></span>
+</a>
+</span>
+</div> </aside>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> 
+</div>
+
+{% endblock %}
